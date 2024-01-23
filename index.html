@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"  data-theme="dark">
+  <head> <!-- lista med barn -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stefans Exempel</title>
+    <link rel="shortcut icon" href="https://picocss.com/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="container">
+      <hgroup>
+        <h1>My players</h1>
+        <h2>A great database</h2>
+      </hgroup>
+    </header>
+    <!-- ./ Header -->
+
+
+
+
+
+    <!-- Main -->
+    <main class="container">
+      <section id="test2">
+        
+        <form>
+          <!-- Search -->
+          <label for="search">Search</label>
+          <input type="search" id="searchPlayer" name="search" placeholder="Search" />
+</form>
+
+<table role="grid" id="allPlayers">
+<thead>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Jersey</th>
+    <th scope="col">Position</th>
+    <th scope="col">Team</th>
+  </tr>
+</thead>
+<tbody>
+  <!-- <tr data-id="1"><th scope="row">Peter Forsberg</th><td>21</td><td>Forward</td><td>Colorado</td></tr><tr data-id="2"><th scope="row">Mats Sundin</th><td>13</td><td>Forward</td><td>Toronto</td></tr><tr data-id="3"><th scope="row">Niklas Lidström</th><td>5</td><td>Defence</td><td>Detroit</td></tr><tr data-id="4"><th scope="row">Mikko Rantanen</th><td>96</td><td>Forward</td><td>Colorado</td></tr><tr data-id="5"><th scope="row">Jack Johnson</th><td>3</td><td>Defence</td><td>Colorado</td></tr> -->
+</tbody>
+</table>
+<br>
+
+<hr>
+<button id="btnAdd">Add new player</button>
+
+      </section>
+
+
+    </main>
+    <!-- ./ Main -->
+
+    <!-- Footer -->
+    <footer class="container">
+      <small
+        >Built with <a href="https://picocss.com">Pico</a> •
+        <a href="https://github.com/picocss/examples/blob/master/v1-basic-template/"
+          >Source code</a
+        ></small
+      >
+    </footer>
+    <!-- ./ Footer -->
+
+
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <form id="editForm">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">
+              Edit
+            </h2>
+          </header>
+          <main class="modal__content" id="modal-1-content">
+              <p>
+                <label>Name</label>
+                  <input
+                    type="text"
+                    name="playerName"
+                    id="playerName"
+                    placeholder="Player name"
+                    aria-label="Player name"
+                    required
+                  />
+                  <label>Jersey</label>
+                  <input
+                    type="number"
+                    name="jersey"
+                    id="jersey"
+                    placeholder=""
+                    aria-label="Jersey"
+                    required
+                  />
+                  <label>Position</label>
+                  <select
+                    name="position"
+                    id="position"
+                    placeholder=""
+                    aria-label="position"
+                    required
+                  >
+                  <option>Goalie</option>
+                  <option>Defence</option>
+                  <option>Forward</option>
+                </select>
+
+      
+            </p>
+          </main>
+          <footer class="modal__footer">
+            <button  id="closeDialog">Save</button>
+            <button  data-micromodal-close aria-label="Close this dialog window">Cancel</button>
+          </footer>
+        </div>
+      </div>
+    </form>
+
+ </div>
+
+
+
+
+
+
+
+
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  <script type="module" src="script.js"></script>
+  </body>
+</html>
